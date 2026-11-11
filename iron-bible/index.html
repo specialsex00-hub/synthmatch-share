@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>アイアンバイブル</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-rec" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></symbol>
+  <symbol id="i-lib" viewBox="0 0 24 24"><path d="M4 4h4v16H4zM10 4h4v16h-4zM16.5 4.5l3.8 1-4 15.4-3.8-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-find" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11h1l1-2 2 4 1-2h1M16.5 16.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 12h3l2-7 3 14 3-10 2 5 2-2h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0-5 5m5-5 5 5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M2 18c4 0 5-12 9-12s4 6 11 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-env" viewBox="0 0 24 24"><path d="M2 20 7 4l4 8h6l5 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-verb" viewBox="0 0 24 24"><path d="M3 12h2M8 8v8M12 5v14M16 8v8M20 11v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-noise" viewBox="0 0 24 24"><path d="M2 12l2-5 2 9 2-7 2 6 2-8 2 10 2-6 2 4 2-5 2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-score" viewBox="0 0 24 24"><path d="M3 6h18M3 10h18M3 14h18M3 18h18" stroke="currentColor" stroke-width="1.4"/><ellipse cx="9" cy="16" rx="2.6" ry="2" transform="rotate(-20 9 16)" fill="currentColor"/><path d="M11.4 15.4V5l5 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-midi" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 5v8M12 5v8M16 5v8" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="logo"><svg><use href="#i-wave"/></svg></span>
+      <span class="brand-name">synthmatch</span>
+    </div>
+
+    <div class="inst-card">
+      <div class="inst-label">使う楽器</div>
+      <select id="instrument" aria-label="楽器"></select>
+      <div id="conn-pills" class="conn-pills"></div>
+    </div>
+
+    <nav class="nav">
+      <button data-view="record" aria-current="page"><svg><use href="#i-rec"/></svg><span>録音</span></button>
+      <button data-view="library"><svg><use href="#i-lib"/></svg><span>ライブラリ</span></button>
+      <button data-view="match"><svg><use href="#i-find"/></svg><span>曲から探す</span></button>
+      <button data-view="sheet"><svg><use href="#i-score"/></svg><span>楽譜にする</span></button>
+    </nav>
+
+    <a class="side-link public-only" href="https://github.com/specialsex00-hub/synthmatch" target="_blank" rel="noopener">ソースコード（GitHub）</a>
+
+    <div class="side-progress">
+      <div class="side-progress-top"><span>ライブラリ</span><span id="side-count"></span></div>
+      <div class="bar"><span id="side-bar"></span></div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <!-- 録音 -->
+    <section class="view" id="view-record">
+      <header class="view-head">
+        <h1>録音</h1>
+        <p>楽器の音色を1つずつ鳴らして録音し、比べるためのライブラリを作ります。</p>
+      </header>
+
+      <div class="stats">
+        <div class="stat stat-hero">
+          <div class="ring" id="ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fg" id="ring-fg"/></svg><span id="ring-pct">0%</span></div>
+          <div>
+            <div class="stat-label">録音済み</div>
+            <div class="stat-num"><span id="stat-recorded">0</span><small> / <span id="stat-total">0</span> 音色</small></div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">全部録るまで</div>
+          <div class="stat-num" id="stat-remaining">-</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">接続</div>
+          <div class="stat-num stat-conn" id="stat-conn">-</div>
+        </div>
+      </div>
+
+      <div class="card live" id="build-run" hidden>
+        <div class="live-top">
+          <span class="rec-dot"></span>
+          <span class="live-state" id="build-state">録音中</span>
+          <span class="live-count" id="build-progress"></span>
+          <button class="btn ghost danger" data-cancel><svg><use href="#i-x"/></svg>中止</button>
+        </div>
+        <div class="live-now">
+          <div class="art big" id="build-art"></div>
+          <div>
+            <div class="eyebrow">いま録音している音色</div>
+            <div class="live-name" id="build-current">-</div>
+            <div class="live-meta" id="build-eta"></div>
+          </div>
+        </div>
+        <div class="bar thick"><span id="build-bar"></span></div>
+        <div class="list compact" id="build-recent"></div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="card-head"><h2>接続チェック</h2><button class="btn ghost small" id="refresh-devices"><svg><use href="#i-redo"/></svg>再確認</button></div>
+          <dl id="inst-settings" class="kv"></dl>
+          <details id="devices-box" class="disclosure">
+            <summary>このMacで見つかった機器</summary>
+            <div id="devices"></div>
+          </details>
+          <div class="test-row">
+            <div class="search-field">
+              <svg><use href="#i-search"/></svg>
+              <input id="test-preset-q" list="test-preset-list" placeholder="テストする音色（空欄なら1番目）">
+              <datalist id="test-preset-list"></datalist>
+            </div>
+            <button class="btn" id="test-btn"><svg><use href="#i-rec"/></svg>テスト録音</button>
+          </div>
+          <div id="test-result"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2>ライブラリを録音</h2></div>
+          <label class="field">カテゴリ
+            <select id="build-category"><option value="">すべてのカテゴリ</option></select>
+          </label>
+          <div class="field-row">
+            <label class="field">最大数（お試し用）<input id="build-limit" type="number" min="1" placeholder="制限なし"></label>
+            <label class="switch"><input type="checkbox" id="build-overwrite"><span class="switch-ui"></span>録音済みも録り直す</label>
+          </div>
+          <div class="cta-row">
+            <button class="btn primary big" id="build-btn"><svg><use href="#i-rec"/></svg>録音を始める</button>
+            <span id="build-estimate" class="muted"></span>
+          </div>
+          <p class="muted small">1音色あたり約15秒。途中で止めても、次は続きから録音します。</p>
+          <div class="divider"><span>または音色を指定</span></div>
+          <div class="test-row">
+            <div class="search-field">
+              <svg><use href="#i-search"/></svg>
+              <input id="one-q" list="one-list" placeholder="音色名（例: Music Box）">
+              <datalist id="one-list"></datalist>
+            </div>
+            <button class="btn" id="one-btn"><svg><use href="#i-rec"/></svg>この音色を録音</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head"><h2>カテゴリ</h2><span class="muted small">タップすると録音対象に選べます</span></div>
+      <div id="cat-groups"></div>
+    </section>
+
+    <!-- ライブラリ -->
+    <section class="view" id="view-library" hidden>
+      <header class="view-head">
+        <h1>ライブラリ</h1>
+        <p>録音した音色を探して試聴できます。</p>
+      </header>
+      <div class="toolbar">
+        <div class="search-field big">
+          <svg><use href="#i-search"/></svg>
+          <input id="lib-q" type="search" placeholder="音色名で検索">
+        </div>
+        <select id="lib-category" aria-label="カテゴリ"><option value="">すべてのカテゴリ</option></select>
+      </div>
+      <div class="chips" id="lib-chips">
+        <button class="chip" data-rec="" aria-pressed="true">すべて</button>
+        <button class="chip" data-rec="true" aria-pressed="false">録音済み</button>
+        <button class="chip" data-rec="false" aria-pressed="false">未録音</button>
+        <span class="chip-sep"></span>
+        <span id="lib-group-chips" class="chips-inline"></span>
+      </div>
+      <div class="muted small" id="lib-count"></div>
+      <div class="tiles" id="lib-tiles"></div>
+    </section>
+
+    <!-- 曲から探す -->
+    <section class="view" id="view-match" hidden>
+      <form id="match-form" class="finder">
+        <label class="orb" id="song-drop">
+          <input type="file" name="song" accept="audio/*" required>
+          <span class="orb-ring"></span><span class="orb-ring r2"></span>
+          <span class="orb-core"><svg><use href="#i-upload"/></svg></span>
+        </label>
+        <div class="finder-text">
+          <h1 id="finder-title">曲をドロップして音色を探す</h1>
+          <p id="finder-sub" class="muted">mp3 / wav をドロップ、または丸をクリックして選択</p>
+        </div>
+        <label class="scope">探す範囲
+          <select name="category" id="match-scope"><option value="">録音済みの全音色</option></select>
+        </label>
+        <div class="finder-actions">
+          <label class="btn ghost" id="midi-btn"><svg><use href="#i-midi"/></svg><span>MIDIを追加（任意）</span><input type="file" name="midi" accept=".mid,.midi" hidden></label>
+          <button class="btn primary big" type="submit" id="match-btn" disabled><svg><use href="#i-find"/></svg>探す</button>
+        </div>
+        <details class="disclosure advanced">
+          <summary>詳細設定</summary>
+          <div class="fields">
+            <label class="field">分離
+              <select name="separator">
+                <option value="demucs">Demucs（曲からキーボードを取り出す）</option>
+                <option value="none">しない（キーボードだけの音源）</option>
+              </select>
+            </label>
+            <label class="field">採譜
+              <select name="transcriber">
+                <option value="auto">自動</option>
+                <option value="basic-pitch">basic-pitch（和音OK）</option>
+                <option value="pyin">pyin（単音のみ）</option>
+              </select>
+            </label>
+            <label class="field">比べる長さ（秒・0で全体）<input name="clip" type="number" value="30" min="0"></label>
+            <label class="field">実際に鳴らして比べ直す数<input name="rerank" type="number" value="3" min="0" max="20"></label>
+            <label class="field">候補の数<input name="top" type="number" value="5" min="1" max="20"></label>
+          </div>
+          <p class="muted small">「実際に鳴らして比べ直す」は、ハードの楽器では実機で録音します（1音色につき比べる長さぶん）。</p>
+        </details>
+      </form>
+
+      <div class="card steps-card" id="match-run" hidden>
+        <ol class="steps" id="steps">
+          <li data-step="1"><span class="step-dot"></span>キーボードを取り出す</li>
+          <li data-step="2"><span class="step-dot"></span>MIDIにする</li>
+          <li data-step="3"><span class="step-dot"></span>音色を比べる</li>
+        </ol>
+        <div class="steps-foot">
+          <span id="match-status" class="muted small"></span>
+          <button class="btn ghost danger small" data-cancel><svg><use href="#i-x"/></svg>中止</button>
+        </div>
+        <details class="disclosure"><summary>ログ</summary><pre id="match-log" class="log"></pre></details>
+      </div>
+
+      <div id="match-result"></div>
+
+      <div class="section-head"><h2>最近の結果</h2></div>
+      <div class="list" id="history"></div>
+    </section>
+    <!-- 楽譜にする -->
+    <section class="view" id="view-sheet" hidden>
+      <form id="sheet-form" class="finder">
+        <label class="orb" id="sheet-drop">
+          <input type="file" name="file" accept="audio/*,video/*,.mp3,.wav,.m4a,.mp4,.mov" required>
+          <span class="orb-ring"></span><span class="orb-ring r2"></span>
+          <span class="orb-core"><svg><use href="#i-score"/></svg></span>
+        </label>
+        <div class="finder-text">
+          <h1 id="sheet-title">ピアノの音から楽譜を作る</h1>
+          <p id="sheet-sub" class="muted">ピアノだけの mp3 / wav / mp4 / 動画をドロップ、または丸をクリックして選択</p>
+        </div>
+        <div class="finder-actions">
+          <input name="title" class="title-input" placeholder="曲名（任意）">
+          <button class="btn primary big" type="submit" id="sheet-btn" disabled><svg><use href="#i-score"/></svg>楽譜にする</button>
+        </div>
+        <details class="disclosure advanced">
+          <summary>設定（わからなければそのままでOK）</summary>
+          <div class="fields">
+            <label class="field">拍子
+              <select name="time_signature"><option>4/4</option><option>3/4</option><option>2/4</option><option>6/8</option></select>
+            </label>
+            <label class="field">テンポ（BPM・空欄で自動）<input name="bpm" type="number" min="30" max="300" step="0.1" placeholder="自動"></label>
+            <label class="field">リズムの細かさ
+              <select name="grid"><option value="4">16分音符まで</option><option value="2">8分音符まで（すっきり）</option></select>
+            </label>
+            <label class="field">右手と左手の境目
+              <select name="split"><option value="55">G3（左手を少なめ）</option><option value="60" selected>C4・真ん中のド</option><option value="64">E4（左手を多め）</option></select>
+            </label>
+            <label class="field">調号
+              <select name="key_sharps"><option value="">自動（転調も検出）</option>
+                <optgroup label="曲全体をこの調号で書く">
+                <option value="-6">♭6つ</option><option value="-5">♭5つ</option><option value="-4">♭4つ</option><option value="-3">♭3つ</option><option value="-2">♭2つ</option><option value="-1">♭1つ</option>
+                <option value="0">なし</option>
+                <option value="1">♯1つ</option><option value="2">♯2つ</option><option value="3">♯3つ</option><option value="4">♯4つ</option><option value="5">♯5つ</option><option value="6">♯6つ</option>
+                </optgroup>
+              </select>
+            </label>
+            <label class="field">音を拾う量
+              <select name="sensitivity">
+                <option value="low">少なめ（弱い音を多めに除く）</option>
+                <option value="normal" selected>ふつう</option>
+                <option value="high">多め（弱い音もなるべく残す）</option>
+                <option value="off">除かない（採譜そのまま）</option>
+              </select>
+            </label>
+            <label class="field">採譜の方法
+              <select name="transcriber"><option value="piano">ピアノ専用（高精度）</option><option value="basic">汎用（ピアノ以外の楽器）</option></select>
+            </label>
+          </div>
+          <p class="muted small local-only">初回だけ、ピアノ採譜のモデル（約170MB）をダウンロードします。</p>
+        </details>
+        <p class="public-note muted small" id="public-note" hidden></p>
+      </form>
+
+      <div class="card steps-card" id="sheet-run" hidden>
+        <ol class="steps four" id="sheet-steps">
+          <li data-step="1"><span class="step-dot"></span>読み込む</li>
+          <li data-step="2"><span class="step-dot"></span>音を拾う</li>
+          <li data-step="3"><span class="step-dot"></span>拍とテンポ</li>
+          <li data-step="4"><span class="step-dot"></span>楽譜にする</li>
+        </ol>
+        <div class="steps-foot">
+          <span id="sheet-status" class="muted small"></span>
+          <button class="btn ghost danger small" data-cancel><svg><use href="#i-x"/></svg>中止</button>
+        </div>
+        <details class="disclosure"><summary>ログ</summary><pre id="sheet-log" class="log"></pre></details>
+      </div>
+
+      <div id="sheet-result"></div>
+
+      <div class="section-head"><h2>作った楽譜</h2></div>
+      <div class="list" id="sheet-history"></div>
+    </section>
+  </main>
+
+  <div class="keys" id="keys" hidden>
+    <canvas id="keys-canvas" aria-label="鳴っている音を示す鍵盤"></canvas>
+    <div class="keys-legend"><span><i style="background:var(--accent)"></i>右手</span><span><i style="background:var(--accent-2)"></i>左手</span></div>
+  </div>
+
+  <footer class="player" id="player">
+    <div class="player-track">
+      <div class="art" id="pl-art"></div>
+      <div class="player-text">
+        <div class="player-title" id="pl-title">再生するものを選んでください</div>
+        <div class="player-sub" id="pl-sub">音色やテスト録音の ▶ を押すとここで再生します</div>
+      </div>
+    </div>
+    <div class="player-center">
+      <div class="player-controls">
+        <div class="ab" id="pl-ab" hidden>
+          <button data-ab="a" aria-pressed="true">A 原曲</button>
+          <button data-ab="b" aria-pressed="false">B 音色</button>
+        </div>
+        <button class="play-btn" id="pl-play" aria-label="再生" disabled><svg><use href="#i-play"/></svg></button>
+      </div>
+      <div class="player-wave">
+        <span id="pl-time">0:00</span>
+        <canvas id="pl-wave" height="36"></canvas>
+        <span id="pl-dur">0:00</span>
+      </div>
+    </div>
+    <div class="player-job" id="job-mini" hidden>
+      <span class="rec-dot"></span><span id="job-mini-text"></span>
+    </div>
+  </footer>
+</div>
+
+<dialog id="tone-dialog" class="sheet" aria-labelledby="tone-name">
+  <div id="tone-body"></div>
+</dialog>
+
+<div id="toast" class="toast" hidden></div>
+<script>window.SYNTHMATCH_SHARE = {"title": "アイアンバイブル", "note": "synthmatch でピアノの音声から自動で作った楽譜です。再生すると、楽譜の上の線と画面下の鍵盤で今の場所と音を示します。個人の練習用にどうぞ。"};</script>
+<script src="app.js"></script>
+</body>
+</html>
