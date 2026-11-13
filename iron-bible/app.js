@@ -629,7 +629,7 @@ function renderSheet(m, scroll = false) {
           ${m.playback === "simple" ? `<p class="muted small">※ ピアノ音源（FluidSynth）が使えなかったため、簡易な音で鳴らしています。</p>` : ""}
         </div>
         <div class="downloads">
-          <a class="btn" href="${esc(u.pdf)}" target="_blank"><svg><use href="#i-download"/></svg>PDF（印刷用）</a>
+          <a class="btn" href="${esc(u.pdf)}" download="${esc(m.title)}.pdf"><svg><use href="#i-download"/></svg>PDF（印刷用）</a>
           <a class="btn" href="${esc(u.musicxml)}" download="${esc(m.title)}.musicxml"><svg><use href="#i-download"/></svg>MusicXML（MuseScoreで編集）</a>
           <a class="btn" href="${esc(u.score_midi)}" download="${esc(m.title)}.mid"><svg><use href="#i-download"/></svg>MIDI（楽譜どおり）</a>
           <a class="btn ghost" href="${esc(u.transcription_midi)}" download="${esc(m.title)}_演奏.mid"><svg><use href="#i-download"/></svg>MIDI（演奏そのまま）</a>
@@ -750,7 +750,7 @@ async function loadSheets() {
         <div class="row-title">${esc(r.title)}</div>
         <div class="row-sub">${esc(r.created.replace("T", " ").slice(0, 16))} ・ ${esc(keyJa(r.key))} ・ ${esc(r.time_signature)} ・ ${r.measures}小節${r.modulations?.length ? ` ・ 転調${r.modulations.length}回` : ""}</div>
       </div>
-      <a href="${esc(r.urls.pdf)}" target="_blank">PDF</a>
+      <a href="${esc(r.urls.pdf)}" download="${esc(r.title)}.pdf">PDF</a>
     </div>`).join("") || `<div class="empty-state">まだありません。上の丸にピアノの音声をドロップして始めましょう。</div>`;
   $$("[data-sheet]", $("#sheet-history")).forEach((el) => el.addEventListener("click", async (e) => {
     if (e.target.closest("a")) return;
